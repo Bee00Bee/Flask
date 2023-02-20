@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>List Elements</h1>
+    {%for i in list_be_shown%}
+        <li>{{ i }}</li>
+    {% endfor %}
+
+    <form method="POST">
+        {{ add_list_element_template.hidden_tag() }}
+        <p>
+            {{ add_list_element_template.item.label }}
+            {{ add_list_element_template.item() }}
+        </p>
+        <p>{{ add_list_element_template.submit() }}</p>
+    </form>
+
+</body>
+</html>
